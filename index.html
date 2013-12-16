@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>An introduction to Javascript</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A short introduction to javascript language">
+		<meta name="author" content="sdemians">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -37,23 +37,242 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1>An introduction to Javascript</h1>
+					<h3>Becoming a Javascript Jedi</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by <a href="http://curiousewok.blogpost.com">Santiago Villa Fernandez</a> / <a href="http://twitter.com/sdemians">@sdemians</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+					<h2>Why JavaScript</h2>
+				</section>
+				<section>
+					<h2>Why JavaScript</h2>
+					<blockquote >
+						&ldquo;Web is the platform.&rdquo;-shollmann (OLX Android developer)
+					</blockquote>
+				</section>
+				<section>
+					<h2>History & Details</h2>
+					<ul>
+						<li>Multi-paradigm: scripting, object-oriented (prototype-based), imperative, functional.</li>
+						<li>Major implementation of ECMAScript.</li>
+						<li>Designed by Brendan Eich.</li>
+						<li>Appeared in 1995.</li>
+						<li>Current version 1.8.5</li>						
+					</ul>
+				</section>
+				<section>
+					<h2>How to install JavaScript?</h2>
+					<p>It is really easy.</p>
+					<p>Download and install google chrome :-P</p>
+				</section>
+				<section>
+					<h2>Datatypes</h2>
+					<ul>
+						<li>Object.</li>
+						<li>Function.</li>
+						<li>Numbers.</li>
+						<li>Strings.</li>
+						<li>Booleans.</li>						
+						<li>null: A value that isn't anything.</li>
+						<li>undefined: Default value for variables and parameters, etc</li>
+					</ul>
+				</section>
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2>Objects</h2>
+					<ul>
+						<li>It can contain data and methods.</li>
+						<li>It can inherit (or extend) from other objects.</li>
+					</ul>
+				</section>
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h2>Object Example</h2>
+					<pre>
+						<code data-trim contenteditable>
+						    // bad
+							var item = new Object();
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+							// good
+							var item = {
+								name : "myName",
+								data : {var1 : 1, var2 : 2}
+							};
+						</code>
+					</pre>
+				</section>
+				<section data-transition="linear" data-background="#CC6600" data-background-transition="slide">
+					<h2>Function</h2>
+					<ul>
+						<li>They are first class objects.</li>
+						<li>They can be passed, stored and returned just like any value.</li>
+					</ul>
+				</section>
+				<section data-transition="linear" data-background="#CC6600" data-background-transition="slide">
+					<h2>Function</h2>
+					<pre>
+						<code data-trim contenteditable>
+							// anonymous function expression
+							var anonymous = function() {
+							  return true;
+							};
+
+							// named function expression
+							var named = function named() {
+							  return true;
+							};
+
+							// immediately-invoked function expression (IIFE)
+							(function() {
+							  console.log('Welcome to the Internet. Please follow me.');
+							})();
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
+					<h2>Array</h2>
+					<ul>
+						<li>They inherits from Object.</li>
+						<li>No need to provide length when you are creating it.</li>
+					</ul>
+				</section>
+				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
+					<h2>Array</h2>
+					<h2>Creation</h2>
+					<pre>
+						<code data-trim contenteditable>
+							//Use the literal syntax for array creation
+
+							// bad
+							var items = new Array();
+
+							// good
+							var items = [];
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
+					<h2>Array</h2>
+					<h2>Adding new elements</h2>
+					If you don't know array length use Array#push.
+					<pre>
+						<code data-trim contenteditable>
+							var someStack = [];
+
+							// bad
+							someStack[someStack.length] = 'abracadabra';
+
+							// good
+							someStack.push('abracadabra')
+						</code>
+					</pre>
+				</section>
+
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<h2>Prototyping</h2>
+					<ul>
+						<li>JavaScript functions work as methods, constructors and modules.</li>
+
+						<li>It has Prototypal Inheritance, instead of classical inheritance</li>
+						<li>All objects are directly or indirectly linked to Object.prototype</li>
+
+					</ul>
+				</section>
+				
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<h2>Inheritance and Overriding</h2>
+					<ul>
+						<li>Define two classes A and B.</li>
+						<li>B must inhererit from A and B have to redefine to string method.</li>
+					</ul>
+				</section>
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<h2>Inheritance and Overriding</h2>
+					<ul>
+						<li>Define two classes A and B.</li>
+						<li>B must inhererit from A and B have to redefine to string method.</li>
+					</ul>
+				</section>
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<pre>
+						<code data-trim contenteditable>
+							/**
+ 							 * A base class
+ 							*/
+							function A() {
+    							this.type = "A type";
+							}
+
+							A.prototype.toString = function() {
+    							return "Transform";
+							}
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<pre>
+						<code data-trim contenteditable>
+							/**
+							 * B class.
+							 */
+							function B(x, y) {
+							    // Parent constructor
+							    A.call(this);
+
+							    // Public properties
+							    this.x = x;
+							    this.y = y;
+							}
+							B.prototype = Object.create(B.prototype);
+						    B.prototype.toString = function() {
+    							return A.prototype.toString() + this.type + " B " + this.x + ":" + this.y;
+							}
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="linear" data-background="#333300" data-background-transition="slide">
+					<h1>Testing Inheritance and overriding</h1>
+					<pre>
+						<code data-trim contenteditable>
+							// Tests
+							var b = new B(10, 15);
+
+							console.log(b instanceof A); // true
+							console.log(b instanceof B); // true
+						</code>
+					</pre>
+				</section>
+
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h1>Frameworks</h1>
+					<ul>
+						<li>jQuery.</li>
+						<li>underscore.</li>
+					</ul>
+				</section>
+
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h1>jQuery</h1>
+					<ul>
+						<li>They are first class objects.</li>
+						<li>They can be passed, stored and returned just like any value.</li>
+					</ul>
+				</section>
+				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+					<h1>jQuery</h1>
+					<ul>
+						<li>They are first class objects.</li>
+						<li>They can be passed, stored and returned just like any value.</li>
+					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -69,7 +288,7 @@
 						</a>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
+						<h2>Datatypes</h2>
 						<p>Press down or up to navigate.</p>
 					</section>
 					<section>
